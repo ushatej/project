@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Employee Screen</title>
+
+    
+</head>
+<body>
+    <div><a href="add.html"><img src="image3.jpg" width="200px" height="100px"></a>
+        </div>
+  <fieldset>
+    <legend>Employee Details</legend>
+
+<form name="empscreen" id="empscreen">
+    <table>
+        <tr>
+            <td>
+                <label for="employeeID">Employee ID</label>
+            </td>
+            <td>
+                <input id="employeeID" name="employee" type="text" maxlength="6" placeholder="Enter Your Id" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="fname">First Name</label>
+            </td>
+            <td>
+                <input id="fname" name="fname" type="text" placeholder="Enter Your First Name" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="lname">Last Name</label>
+            </td>
+            <td>
+                <input id="lname" name="lname" type="text" placeholder="Enter Your Last Name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="mobileno">Mobile Number</label>
+            </td>
+            <td>
+                <input id="mobileno" name="mobileno" type="text" maxlength="10" placeholder="Enter Your Mobile Number">
+            </td>
+        </tr>
+    </table><br><br>
+    <input type="button" onclick="addEmployee();" value="Add" class="btn" >
+</form>
+</fieldset>
+<br>
+<table id="results" border="1">
+    <caption><b>Employee Table</b></caption>
+    <thead>
+    <tr>
+        <th>Employee ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile Number</th>
+        <th colspan="2">Action</th>
+    </tr>
+    </thead>
+</table>
+<script src="scripting.js"></script>
+
+
+</body>
+</html>
+  
+
+                

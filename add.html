@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  
+    
+    <style>
+       body{
+        background-color:rgb(132, 146, 146);
+       }
+        input[type=text]{
+     width: 30%;
+    padding: 7px;
+        }
+        #jod{
+            width: 31%;
+    padding: 8px;
+        }
+        button{
+            width: 13%;
+    padding: 10px;
+    background-color: rgba(231, 241, 245, 0.687);
+    color: black;
+    cursor: pointer;
+        }
+    button:hover{
+        background-color: rgb(36, 167, 36);
+    }
+    
+    label{
+        font-size: large;
+    }
+    h2{
+        color:white;
+    }
+    </style>
+  <title>Add Screen</title>
+    </head>
+    <body>
+        <h2>Employee Add Screen</h2>
+        <div>
+            <label>Created By</label><br>
+            <input type="text" id="createdby" name="createdby">
+            </div><br>
+            <div>
+                <label>Updated  By</label><br>
+                <input type="text" id="updatedby" name="updatedby">
+                </div><br>
+        
+        <div>
+            <label>First Name</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Enter Your First Name" required>
+            </div><br>
+            <div>
+                 <label> Last Name</label><br>
+           <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name">
+        </div> <br>
+        <div>
+            <label>Employee Id </label><br>
+            <input type="text" id="emid" name="emid" maxlength="6"  placeholder="Enter Your Id" required>
+        </div><br>
+          <div> 
+             <label>Mobile Number</label><br>
+            <input type="text" id="mobno" maxlength="10" placeholder="Enter Your Mobile Number">
+            </div> <br>
+        
+    <div>
+        <label for="jobtitle">Job title</label><br>
+        <select id="jod">
+            <option value=" " > </option>
+            <option value="webdeveloper">web Developer</option>
+            <option value="projectmanager">Project Manager</option>
+            <option value="accountmanager">Account Manager</option>
+            <option value="softwareengineer">Software Engineer</option>
+        </select>
+        </div><br>
+        <div>
+             <label for="department">Department Name</label><br>
+            <select id="jod">
+                <option value=" ">  </option>
+                <option value="sales">Sales Department</option>
+                <option value="marketing">Marketing Department</option>
+                <option value=Finance">Finance Department</option>
+                <option value="production">Production Department</option>
+                </select>
+                </div><br>
+             <div>
+                <label>Date of joining</label><br>
+                <input type="text" id="datepick" >
+             </div><br>
+             <div>
+                <label>Company BranchId</label><br>
+                    <input type="text" id="branchid" name="branchid">
+                    </div><br>
+                    <div>
+                <label>Address</label><br>
+                <textarea id="txtarea" name="txtarea" rows="3" cols="48"> </textarea>
+             </div>
+             <br><br>
+
+<button onclick="saveEmployee();">Save</button>
+</p>
+<script>
+    $(function() {  
+            $( "#datepick" ).datepicker({  
+                dateFormat:"dd-mm-yy"
+            });
+        });
+        function saveEmployee(employeeID,firstname,lastname,mobileno){
+        var employeeID = document.getElementById("employeeID").value;
+        var firstname = document.getElementById("fname").value;
+        var lastname = document.getElementById("lname").value;
+        var mobileno = document.getElementById("mobileno").value;   
+        var table=document.getElementById("results");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        cell1.innerHTML = employeeID;
+        cell2.innerHTML = firstname;
+        cell3.innerHTML = lastname;        
+        cell4.innerHTML = mobileno;  
+        }  
+        
+    
+</script>
+</body>
+</html>

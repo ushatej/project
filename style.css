@@ -1,0 +1,46 @@
+input[type=button]{
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+fieldset .btn:hover{
+    background-color: lightgreen;
+    
+}
+div{
+    background-color:gainsboro;
+}
+input[type=text]{
+    padding: 3px;
+    width: 200px;
+
+}
+
+legend{
+    color: rgb(119, 119, 211);
+    background: transparent;
+    font-size: x-large;
+}
+fieldset{
+    border: 1px solid wheat;
+    font-size: large;
+    margin: 1em;
+    padding: 1em;
+}
+#results{
+    margin-left: 600px;
+    
+}
+table caption{
+    color:blue;
+    font-size: larger;
+}
+
+
+   
+
+
+
+   
+    
+
